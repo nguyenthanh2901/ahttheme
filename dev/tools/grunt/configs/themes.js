@@ -50,5 +50,14 @@ module.exports = {
             'css/styles'
         ],
         dsl: 'less'
+    },
+    theme: {
+        area: 'frontend',
+        name: 'AHT/theme',
+        locale: 'en_US',
+        files: [
+            'css/source/_theme'
+        ],
+        dsl: 'less'
     }
 };

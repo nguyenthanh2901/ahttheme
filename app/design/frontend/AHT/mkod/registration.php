@@ -6,4 +6,4 @@
 
 use \Magento\Framework\Component\ComponentRegistrar;
 
-ComponentRegistrar::register(ComponentRegistrar::THEME, 'frontend/AHT/theme', __DIR__);
+ComponentRegistrar::register(ComponentRegistrar::THEME, 'frontend/AHT/mkod', __DIR__);

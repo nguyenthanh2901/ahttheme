@@ -1,0 +1,10 @@
+<div class="top-before-header">
+    <div class="top-before-header-content">
+        <?php
+        echo $block->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('top_before_header')
+                ->toHtml();
+        ?>
+    </div>    
+</div>
