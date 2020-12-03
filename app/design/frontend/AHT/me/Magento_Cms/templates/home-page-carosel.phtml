@@ -1,0 +1,43 @@
+<div class="home-page-carosel">
+    <?php for ($i=1; $i <= 2; $i++) { ?>
+        <div class="item">
+            <?php 
+                // Lay Anh
+                echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('home-page-carosel-img-'.$i)->toHtml();
+            ?>
+            <div class="item-content">
+                <?php 
+                    //Lay Text
+                    echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('home-page-carosel-text-'.$i)->toHtml();
+                ?>
+                <a class="btn--lg" href="#">
+                    <?php 
+                        //Lay button
+                        echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('home-page-carosel-button-'.$i)->toHtml();
+                    ?>
+
+                    <p>&nbsp<i class="fa fa-chevron-right" aria-hidden="true"></i></p>
+                </a>
+            </div>
+        </div>
+    <?php } ?>
+</div>
+
+<script type="text/javascript">
+    require([ 
+            'slick', 'jquery'
+        ],
+        function ($) {  
+            jQuery(document).ready(function () {
+                jQuery(".home-page-carosel").slick({
+                    dot: false,
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    swipeToSlide: true
+                });
+            });
+        }
+    )
+</script>

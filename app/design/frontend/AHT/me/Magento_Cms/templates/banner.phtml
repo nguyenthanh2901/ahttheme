@@ -1,0 +1,125 @@
+<div class="banner">
+    <div class="banner-top">
+        <div class="banner-top-up">
+            <div class="banner-top-item">
+                <?php 
+                    echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('banner-top-left-img')->toHtml();
+                ?>
+
+                <div class="banner-top-item-title">
+                    <?php 
+                        echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('banner-top-left-text')->toHtml();
+                    ?>
+                    <a href="" class="btn--md">shop now</a>
+                </div>
+            </div>
+            
+            <div class="banner-top-item">
+                <?php 
+                    echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('banner-top-right-img')->toHtml();
+                ?>
+
+                <div class="banner-top-item-title">
+                    <?php 
+                        echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('banner-top-right-text')->toHtml();
+                    ?>
+                    <a href="" class="btn--md">shop now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner-reason-to-buy">
+            <?php 
+                echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('banner-reason-to-buy')->toHtml();
+            ?>
+        </div>
+    </div>
+
+    <div class="banner-main">
+        <div class="banner-main-up">
+            <?php for ($i=1; $i <4 ; $i++) {  ?>
+                <div class="banner-main-up-item">
+                    <?php
+                        echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('banner-main-up-img-'.$i)->toHtml();
+                    ?>
+                    <div class="banner-main-up-item-title">
+                        <?php 
+                            echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('banner-main-up-text-'.$i)->toHtml();
+                        ?>
+                        <a class="btn--md" href="">shop now</a>
+                    </div>
+                </div>
+            <?php } ?>
+
+            <div class="banner-main-up-item">
+                <?php
+                    echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('banner-main-up-img-mobile')->toHtml();
+                ?>
+                <div class="banner-main-up-item-title">
+                    <?php 
+                        echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('banner-main-up-text-mobile')->toHtml();
+                    ?>
+                    <a class="btn--md" href="">Explore now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner-main-down">
+            <div class="banner-main-down-item">
+                <?php 
+                    echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('banner-main-down-left-img')->toHtml();
+                ?>
+                <div class="banner-main-down-item-title">
+                    <?php 
+                        echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('banner-main-down-left-text')->toHtml();
+                    ?>
+                    <a class="btn--lg" href="#">Explore now</a>
+                </div>
+            </div>    
+            <div class="banner-main-down-item">
+                <?php 
+                    echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('banner-main-down-right-img')->toHtml();
+                ?>
+            </div>    
+                
+        </div>
+    </div>
+</div>
+
+
+<script>
+    require(['jquery', 'slick'], function($) {
+	    $(document).ready(function() {
+	        $(".banner-reason-to-buy").slick({
+	            infinite: true,
+	            slidesToShow: 3,
+                slidesToScroll: 3,
+                arrows: false,
+                swipeToSlide: true,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+	        });
+	    });
+	});
+</script>

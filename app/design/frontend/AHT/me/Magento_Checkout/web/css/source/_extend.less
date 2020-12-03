@@ -1,0 +1,123 @@
+& when (@media-common =true) {
+    
+
+    .block-minicart .block-content > .actions button {
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        background: #23ad1c;
+        color: white;
+        padding: 15px;
+        text-transform: uppercase;
+    }
+
+    .minicart-items .product-item-name a {
+        color: #393333;
+        font-weight: bold;
+    }
+
+    a.action.viewcart {
+        color: #393333;
+    }
+
+    .more,.less {
+        height: 40px;
+        width: 40px;
+        background: white;
+        color: #999999;
+        font-size: 20px;
+        border: 1px solid #cdcdcd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .qty-toolbar{
+        display: flex;
+
+        input {
+            height: 40px;
+        }
+    }
+
+    .minicart-items .action.edit
+    {
+        color: black;
+        margin-right: 10px;
+
+        &:before{
+            display: none;
+        }
+    }
+
+    .minicart-items .action.delete{
+        color: black;
+
+        &:before{
+            display: none;
+        }
+    }
+
+    .minicart-wrapper .product .actions {
+        margin: -30px 0 0;
+    }
+}
+
+// Tablet (>= 768px)
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
+    .minicart-wrapper .action.showcart:before{
+        color: #d30000;
+    }
+
+    .minicart-wrapper .action.showcart .counter.qty {
+        color: #d30000;
+        background: unset;
+    }
+
+    .minicart-wrapper .action.showcart .counter.qty{
+        &:before {
+            content: "Cart (";
+            margin-right: -3px;
+        }
+        &:after {
+            content: ")";
+            margin-left: -3px;
+        }
+    }
+}
+
+//Mobile
+@media only screen and (max-width: @screen__m) {
+    .minicart-wrapper .action.showcart:before {
+        color:black;
+        content: "\f07a";
+        font-family: 'FontAwesome';
+        font-size: 22px;
+    }
+
+    .minicart-wrapper .action.showcart.active:before {
+        content: "\f07a";
+        font-family: 'FontAwesome';
+        font-size: 22px;
+        color: black;
+    }
+
+    .minicart-wrapper {
+        margin-top: 0;
+    }
+
+    .minicart-wrapper .action.showcart .counter.qty{
+        background: #23ad1c;
+        height: unset;
+        line-height: unset;
+        position: absolute;
+        border-radius: 50%;
+        left: 10px;
+        margin: 0;
+    }
+
+    .minicart-wrapper .update-cart-item {
+        float: unset;
+        margin-left: 84px;
+    }
+}

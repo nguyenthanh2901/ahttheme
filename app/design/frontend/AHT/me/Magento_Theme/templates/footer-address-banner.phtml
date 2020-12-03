@@ -1,0 +1,18 @@
+<div class="footer-address-banner">
+    <div class="page-main">
+        <div class="footer-address-banner-list">
+            <?php for ($i=1; $i <= 5; $i++) {  ?>
+                <div class="footer-address-banner-item">
+                    <div class="footer-address-banner-item-btn">
+                        <a href="#" class="btn--md">
+                            <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('address-banner-btn-1')->toHtml() ?>
+                        </a>
+                    </div>
+
+                    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('address-banner-properties-1')->toHtml() ?>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+</div>
+

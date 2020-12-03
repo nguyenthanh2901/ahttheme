@@ -1,0 +1,19 @@
+<div class="testimonials_blog">
+    <div class="testimonials_blog-title">
+        <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('testimonials-blog-title')->toHtml() ?>
+    </div>
+
+    <div class="testimonials_blog-list">
+        <?php for ($i=1; $i <= 6; $i++) {  ?>
+            <div class="testimonials_blog-item">
+                <div class="testimonials_blog-text">
+                    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('testimonials-blog-text')->toHtml() ?>
+                </div>
+            </div>
+        <?php }?>
+    </div>
+
+    <div class="testimonials_blog-btn">
+        <a href="#" class="btn--md">View more testimonials</a>
+    </div>
+</div>

@@ -5,7 +5,9 @@
         <referenceContainer name="header.panel">
             <block class="Magento\Framework\View\Element\Template" name="top.link.before.header" template="Magento_Theme::topbeforeheader.phtml"></block>
         </referenceContainer>
-
-
+        <referenceBlock name="report.bugs" remove="true"></referenceBlock>
+        <referenceBlock name="footer_links" remove="true"></referenceBlock>
+        <referenceBlock name="copyright" remove="true"></referenceBlock>
+         
     </body>
 </page>

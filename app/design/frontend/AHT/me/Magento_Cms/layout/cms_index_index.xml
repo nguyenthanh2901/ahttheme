@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="page.wrapper">
+            <container name="home.page.main.banner.section" htmlTag="section" htmlClass="home-page-main-banner-section" before="main.content">
+                <block class="Magento\Framework\View\Element\Template" name="home-page-carosel-block" template="Magento_Cms::home-page-carosel.phtml"  before="-"/>
+            </container>
+
+            
+        </referenceContainer>
+
+        <referenceContainer name="main">
+            <block class="Magento\Framework\View\Element\Template" name="banner-block" template="Magento_Cms::banner.phtml"/>
+
+            <block class="Magento\Framework\View\Element\Template" name="bestsellers-demo" template="Magento_Cms::bestsellers.phtml"/>
+
+            <block class="Magento\Framework\View\Element\Template" name="new_arrival-block" template="Magento_Cms::new_arrival.phtml"/>
+            
+            <block class="Magento\Framework\View\Element\Template" name="banner-instagram_blog" template="Magento_Cms::instagram_blog.phtml"/>
+            
+            <block class="Magento\Framework\View\Element\Template" name="banner-furniture_blog" template="Magento_Cms::furniture_blog.phtml"/>
+            
+            <block class="Magento\Framework\View\Element\Template" name="banner-testimonials_blog" template="Magento_Cms::testimonials_blog.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

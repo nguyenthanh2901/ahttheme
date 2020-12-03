@@ -1,0 +1,67 @@
+<div class="insta-blog">
+    <div class="insta-blog-title">
+        <?php 
+            echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('instagram-blog-text')->toHtml();
+        ?>
+    </div>
+
+    <div class="insta-blog-img">
+        <?php 
+            echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('instagram-blog-img')->toHtml();
+        ?>
+    </div>
+
+    <div class="insta-blog-btn">
+        <a href="#" class="btn--md">view on instagram</a>
+    </div>
+</div>
+
+<script>
+    require(['jquery', 'slick'], function($) {
+	    $(document).ready(function() {
+	        $(".insta-blog-img >p").slick({
+	            infinite: true,
+	            slidesToShow: 5,
+                slidesToScroll: 5,
+                arrows: true,
+                swipeToSlide: true,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            arrows: true,
+                            swipeToSlide: true,
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            rows: 2,
+                            infinite: true,
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            swipeToSlide: true,
+                            dots: true,
+                            arrows: false,
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            rows: 2,
+                            infinite: true,
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            swipeToSlide: true,
+                            dots: true,
+                            arrows: false,
+                        }
+                    }
+                ]
+	        });
+	    });
+	});
+</script>

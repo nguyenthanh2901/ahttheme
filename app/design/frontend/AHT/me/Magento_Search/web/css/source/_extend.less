@@ -1,0 +1,43 @@
+// & when (@media-common =true) {
+    
+// }
+
+// Tablet (>= 768px)
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
+    .block.block-search {
+        max-width: 398px;
+    }
+
+    .block-search input {
+        border: 2px solid #bbbbbb;
+        height: 38px;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .block.block-search{
+        width: 398px;
+    }
+}
+
+//Mobile
+@media only screen and (max-width: @screen__m) {
+    .block-search .label{
+        display: none;
+    }
+
+    input#search {
+        box-shadow: none;
+    }
+
+    .block-search input {
+        left: unset;
+        margin: unset;
+        position: unset;
+        margin-top: unset;
+    }
+
+    .block-search .control{
+        border: none;
+    }
+}

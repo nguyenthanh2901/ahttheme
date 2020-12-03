@@ -1,0 +1,23 @@
+<?php 
+    echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer-link3')->toHtml();
+?>
+
+<div class="footer-link-mobile" data-role="content" data-mage-init='
+    {
+        "accordion":
+        {
+            "openedState": "active",
+            "collapsible": true,
+            "active": false,
+            "multipleCollapsible": false
+        }
+    }'>
+    <div data-role="collapsible" class="filter-options-item">
+        <div data-role="title" class="filter-options-title">Our Policies</div>
+        <div data-role="content" class="filter-options-content" role="tabpanel" aria-hidden="false" style="display: block;">
+            <?php 
+                echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer-link3')->toHtml();
+            ?>
+        </div>
+    </div>
+</div>

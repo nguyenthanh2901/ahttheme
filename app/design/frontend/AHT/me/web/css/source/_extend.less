@@ -1,0 +1,83 @@
+// /**
+//  * Copyright © Magento, Inc. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//Style Guide
+@import '_style.guide.less';
+
+//Font
+@font-family-name__base__roboto: 'Roboto', sans-serif;
+@font-family-name__base__lora: 'Lora', serif;
+@font-family-name__base__maket: 'MARKETWEB';
+@font-family__base__roboto: @font-family-name__base__roboto, @font-family__sans-serif;
+@font-family__base__lora: @font-family-name__base__lora, @font-family__sans-serif;
+@font-family__base__maket: @font-family-name__base__maket, @font-family__sans-serif;
+
+
+& when (@media-common = true) {
+    // roboto
+    .lib-font-face(
+        @family-name: @font-family-name__base__roboto,
+        @font-path: '@{baseDir}fonts/roboto/light/Roboto-Light',
+        @font-weight: 300,
+        @font-style: normal
+    );
+
+    .lib-font-face(
+        @family-name: @font-family-name__base__roboto,
+        @font-path: '@{baseDir}fonts/roboto/regular/Roboto-Regular',
+        @font-weight: 400,
+        @font-style: normal
+    );
+
+    .lib-font-face(
+        @family-name: @font-family-name__base__roboto,
+        @font-path: '@{baseDir}fonts/roboto/semibold/Roboto-BoldItalic',
+        @font-weight: 600,
+        @font-style: normal
+    );
+
+    .lib-font-face(
+        @family-name: @font-family-name__base__roboto,
+        @font-path: '@{baseDir}fonts/lora/bold/Roboto-Bold',
+        @font-weight: 700,
+        @font-style: normal
+    );
+
+    // lora
+    .lib-font-face(
+        @family-name: @font-family-name__base__lora,
+        @font-path: '@{baseDir}fonts/lora/bold/Lora-Bold',
+        @font-weight: 700,
+        @font-style: normal
+    );
+
+    .lib-font-face(
+        @family-name: @font-family-name__base__lora,
+        @font-path: '@{baseDir}fonts/lora/light/Lora-BoldItalic',
+        @font-weight: 300,
+        @font-style: normal
+    );
+
+    .lib-font-face(
+        @family-name: @font-family-name__base__lora,
+        @font-path: '@{baseDir}fonts/lora/regular/Lora-Regular',
+        @font-weight: 400,
+        @font-style: normal
+    );
+
+    .lib-font-face(
+        @family-name: @font-family-name__base__lora,
+        @font-path: '@{baseDir}fonts/lora/semibold/Lora-SemiBold',
+        @font-weight: 600,
+        @font-style: normal
+    );
+
+    .lib-font-face(
+        @family-name:  @font-family-name__base__maket,
+        @font-path: '@{baseDir}fonts/market/bold/marketweb',
+        @font-weight: 600,
+        @font-style: normal
+    );
+}

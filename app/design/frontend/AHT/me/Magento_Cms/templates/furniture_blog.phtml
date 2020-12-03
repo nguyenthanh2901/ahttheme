@@ -1,0 +1,28 @@
+<div class="furniture_blog">
+    <div class="furniture_blog-title">
+        <?php 
+            echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('furniture-blog-title')->toHtml();
+        ?>
+    </div>
+
+    <div class="furniture_blog-list">
+        <?php 
+            for ($i=1; $i <= 6; $i++) { 
+        ?>
+            <div class="furniture_blog-item">
+                <div class="furniture_blog-img">
+                    <?php 
+                        echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('furniture-blog-img-'.$i)->toHtml();
+                    ?>
+                </div>
+                <div class="furniture_blog-text">
+                    <?php 
+                        echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('furniture-blog-text')->toHtml();
+                    ?>
+                </div>
+            </div>
+        <?php
+            }
+        ?>
+    </div>
+</div>
